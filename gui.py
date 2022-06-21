@@ -135,7 +135,7 @@ def PokazWykres(wykresy, inf, n, plotno):
 		infstart.Show()
 		infstart.SetLabel("Przesuniecie poczatku sekwencji: "+str(inf[n][2]))
 
-	
+#Very ugly function unnecessarily stretched by serval options of running it. I should make separate function for serial analysis
 def StworzDotPlot(evt):
 	global parametry, wykresy, Nplot
 	infstart.Hide()
@@ -368,21 +368,6 @@ def Wtext5(evt):
 	teksthelp.SetLabel(text5)
 	teksthelp.Wrap(400)
 
-	
-
-'''
-class OknoWynikowe(wx.Frame):
-	def __init__(self, parent):
-		wx.Frame.__init__(self, parent, title="Wyniki", size=(800,600))
-		self.panel=wx.Panel(parent=self)
-		self.Center()
-		self.poprzedni=wx.Button(self.panel, pos=(0,0), size=(20,560), label="<")
-		self.nast=wx.Button(self.panel, pos=(763,0), size=(20,560), label=">")
-		self.Show()
-		
-	def PokazWykres(self, plots):
-		self.canvas=FigureCanvas(self,-1,plots[0])
-'''
 		
 program=wx.App()
 okno1=wx.Frame(None, title="Program", size=(800,600), style=wx.CAPTION | wx.SYSTEM_MENU | wx.CLOSE_BOX | wx.MINIMIZE_BOX)
