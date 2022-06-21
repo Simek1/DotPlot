@@ -229,6 +229,13 @@ def StworzDotPlot(evt):
 												parametry.append([str(i),str(krok),przesuniecie])
 												PokazWykres(wykresy, parametry, Nplot, mnw)
 												oknoW.Show()
+							else:
+								wspolrzedne=znajdz_wspolrzedne2(dotplotseq[0], dotplotseq[1], int(WOkna.GetValue()), int(Prog.GetValue()), int(StartSeq1.GetValue()), int(StartSeq1.GetValue()))
+								wykresik=NarysujDotPlot(wspolrzedne,len(dotplotseq[0]),len(dotplotseq[1]))
+								wykresy.append(wykresik)
+								parametry.append([WOkna.GetValue(), Prog.GetValue()])
+								PokazWykres(wykresy, parametry, Nplot, mnw)
+								oknoW.Show()
 					else:
 						wx.MessageBox("Start pierwszej i drugiej sekwencji musi byc liczba", label="Ostrzezenie", parent=okno1)
 				elif StartSeq1.GetValue()!='':
@@ -268,9 +275,16 @@ def StworzDotPlot(evt):
 												parametry.append([str(i),str(krok), przesuniecie])
 												PokazWykres(wykresy, parametry, Nplot, mnw)
 												oknoW.Show()
+							else:
+								wspolrzedne=znajdz_wspolrzedne2(dotplotseq[0], dotplotseq[1], int(WOkna.GetValue()), int(Prog.GetValue()), int(StartSeq1.GetValue()))
+								wykresik=NarysujDotPlot(wspolrzedne,len(dotplotseq[0]),len(dotplotseq[1]))
+								wykresy.append(wykresik)
+								parametry.append([WOkna.GetValue(), Prog.GetValue()])
+								PokazWykres(wykresy, parametry, Nplot, mnw)
+								oknoW.Show()
 					else:
 						wx.MessageBox("Start pierwszej sekwencji musi byc liczba", label="Ostrzezenie")
-				elif tseq2.GetValue()!='':
+				elif StartSeq2.GetValue()!='':
 					if StartSeq2.GetValue().isnumeric():
 						if metoda==0:
 							if SeryjnaAnaliza.IsChecked():
@@ -307,6 +321,13 @@ def StworzDotPlot(evt):
 												parametry.append([str(i),str(krok), przesuniecie])
 												PokazWykres(wykresy, parametry, Nplot, mnw)
 												oknoW.Show()
+							else:
+								wspolrzedne=znajdz_wspolrzedne2(dotplotseq[0], dotplotseq[1], int(WOkna.GetValue()), int(Prog.GetValue()), start2=int(StartSeq2.GetValue()))
+								wykresik=NarysujDotPlot(wspolrzedne,len(dotplotseq[0]),len(dotplotseq[1]))
+								wykresy.append(wykresik)
+								parametry.append([WOkna.GetValue(), Prog.GetValue()])
+								PokazWykres(wykresy, parametry, Nplot, mnw)
+								oknoW.Show()
 					else:
 						wx.MessageBox("Start drugiej sekwencji musi byc liczba", label="Ostrzezenie")
 		else:
