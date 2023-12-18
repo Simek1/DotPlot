@@ -17,4 +17,12 @@ Program requires the following libraries:
 
 ---
 # How to run program
-Interface is launched from gui.py file. To start program you need to load fasta sequences by clicking "Wczytaj sekwencje" button. You can find example fasta files in NCBI base. When data is loaded you have to choose which 2 sequences (they can be the same sequences) do you wanna use to make dot plot by "Dodaj do dot-plota" button. Then u have to set basic parameters as a size of window and threshold (for short seqences <1000 bp, size of window=3 and threshold=3 should be good). When these parameters are set you can start the program by clicking "Stwórz dot-plot" button.
+![menu](/readme_imgs/menu.png)
+
+The interface is launched from the 'gui.py' file. To start the program, you need to load FASTA sequences by clicking button number 3. Properly loaded sequences should appear in list number 1. You can delete them from the program by pressing button number 4. Example FASTA files can be found in the NCBI database.
+
+Once the data is loaded, you need to set the analysis parameters in section number 5. First, set the basic parameters such as the window size (1st parameter) and the threshold (2nd parameter). For short sequences <1000 bp a window size of 3 and a threshold of 3 should work well. The 3rd parameter denotes the number of the first nucleotide to be aligned from the first sequence, and the 4th parameter is the number of the first nucleotide to be aligned from the second sequence.
+
+In section number 6, you can change the alignment method. Section number 7 allows you to activate and configure serial analysis, enabling multiple analyses after a single launch, generating varied settings for window size and threshold each time. Next, select the two sequences (which can be the same) to create a dot plot by clicking button number 8. To reverse this action, use button number 9.
+
+Once everything is configured, start the program by clicking button number 10.
