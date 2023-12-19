@@ -1,9 +1,9 @@
 ---
 # About the project
-This repository contains program with simple graphical interface based on WX. Task of this program is to create dotplot from FASTA sequences.
+This repository contains a program with simple graphical interface based on WX. Task of this program is to create a dotplot from FASTA sequences.
 
 
-Program has been created as part of completing my study subject.
+Program has been created as a part of completing my study subject.
 
 ---
 # Requirements
